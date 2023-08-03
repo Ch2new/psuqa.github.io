@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือและแบบฟอร์ม</title>
+    <link rel="stylesheet" href="manual.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- ส่วนของ statusbar -->
+    <div class="statusbar">
+        <p>งานประกันคุณภาพการศึกษา มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎ์ธานี</p>
+    </div>
+    
+    <!-- ส่วนของ navigatebar -->
+    <div class="navbar">
+      <img src="../image/nav-img/psu-icon.png" id="psu-icon" alt="psu-img">
+      <ul class="nav-link">
+          <li><a href="../main.html" id="home">หน้าแรก</a></li>
+          <li>
+            <a href="#" class="about-menu">เกี่ยวกับ <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown about-dropdown">
+              <a href="../นโยบายประกันคุณภาพ/policy.css">นโยบายประกันคุณภาพ</a>
+              <a href="../บุลคลากร/person.html">บุคลากร</a>
+              <a href="../ประกาศ/announce.html">ประกาศ/ข้อบังคับ/ระเบียบ</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="tqa-menu">งานประกันคุณภาพ <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown tqa-dropdown">
+              <a href="../TQA/tqa.html">TQA</a>
+              <a href="../SAR/sar.html">SAR</a>
+              <a href="../EDPEX/edpex.html">EdPEX</a>
+              <a href="../AUNQA/aunqa.html">AUN QA</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="risk-menu">บริหารความเสี่ยงและควบคุมภายใน <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown risk-dropdown">
+              <a href="../การบริหารความเสี่ยง/risk.html">การบริหารความเสี่ยง<br>และการควบคุมภายใน</a>
+              <a href="../คู่มือและแบบฟอร์ม/manual.html">คู่มือและแบบฟอร์ม</a>
+            </div>
+          </li>
+          <li><a href="../ประกาศ/announce.html">ประชุม/โครงการ/สัมมนา</a></li>
+          <li><a href="../Contact/contact.html">ติดต่อเรา</a></li>
+      </ul>
+  </div>
+
+    <!-- ส่วนนำทาง -->
+    <div class="location">
+        <div class="location-content"><a href="../main.html">หน้าแรก</a><span> > การบริหารความเสี่ยงและการควบคุมภายใน > คู่มือและแบบฟอร์ม</span></div>
+    </div>
+    
+    <!-- ส่วนของเนื้อหา -->
+    <div class="content">
+      <h1>คู่มือ/แบบฟอร์ม การบริหารความเสี่ยงและควบคุมภายใน</h1>
+      <h2>คู่มือการบริหารและควบคุมภายใน</h2>
+      <div class="manual-content">
+        <a href="https://iqa.surat.psu.ac.th/new/images/rf1.pdf" target="_blank"><img src="image/manual-1.png" alt="document-img"><br>แนวทางการบริหารจัดการความเสี่ยง<br>เรื่อง หลักการบริหารจัดการ<br>ความเสี่ยงระดับองค์กร</a>
+        <a href="https://iqa.surat.psu.ac.th/new/images/rf2.pdf" target="_blank"><img src="image/manual-2.png" alt="document-img"><br>แนวทางการบริหารจัดการความเสี่ยง<br>สำหรับหน่วยงานของรัฐ เรื่อง<br>หลักการบริหารจัดการความเสี่ยง<br>ระดับองค์กร</a>
+        <a href="https://iqa.surat.psu.ac.th/new/images/rf3.pdf" target="_blank"><img src="image/manual-3.png" alt="document-img"><br>คู่มือบริหารความเสี่ยง (ERM)<br>ฉบับปรับปรุงครั้งที่ 1</a>
+        <a href="https://iqa.surat.psu.ac.th/new/images/rf4.pdf" target="_blank"><img src="image/manual-4.png" alt="document-img"><br>แนวทางการจัดวางระบบการควบคุม<br> และการประเมินผลการควบคุมภายใน</a>
+      </div>
+      <h2>แบบฟอร์มรายงานการบริหารความเสี่ยง</h2>
+      <div class="button-content">
+        <button id="bt1" onclick="showContent(1)">2565</button>
+        <button id="bt2" onclick="showContent(2)">2564</button>
+      </div>
+      <div class="document-content" id="first-content" style="display: grid;">
+        <a href="#"><img src="image/doc.png">แบบติดตามผลการบริหารจัดการความเสี่ยง (รอบ 6 เดือน) (Update 21/3/65)</a>
+        <a href="#"><img src="image/doc.png">แบบสรุปผลการดำเนินงานจากการบริหารความเสี่ยง (รอบ 12 เดือน) (Update 27/9/64)</a>
+        <a href="#"><img src="image/doc.png">ตารางการวิเคราะห์ความเสี่ยง (RA) (Update 27/9/64)</a>
+        <a href="#"><img src="image/doc.png">แผนการบริหารความเสี่ยง (RM) (Update 27/9/64)</a>
+        <a href="#"><img src="image/doc.png">เกณฑ์ระดับโอกาสที่จะเกิดความเสี่ยงและระดับความรุนแรงของผลกระทบ (Update 8/10/64)</a>
+      </div>
+      <div class="document-content" id="second-content" style="display: none;">
+        <a href="#"><img src="image/doc.png">การประเมินค่าความเสี่ยง (Update 20/1/64)</a>
+        <a href="#"><img src="image/doc.png">ตารางเกณฑ์ประเมินโอกาสและผลกระทบ (Update 20/1/64)</a>
+        <a href="#"><img src="image/doc.png">แบบฟอร์มการวิเคราะห์ความเสี่ยง (RA) (Update 20/1/64)</a>
+        <a href="#"><img src="image/doc.png">แบบฟอร์มแผนการบริหารความเสี่ยง (RM) (Update 20/1/64)</a>
+        <a href="#"><img src="image/doc.png">แบบติดตามผลการบริหารจัดการความเสี่ยงรอบ 6 เดือน (Update 8/4/64)</a>
+      </div>
+      <h2>แบบฟอร์มรายงานควบคุมภายใน</h2>
+      <div class="document-content third-content" style="display: grid;">
+        <a href="#"><img src="image/doc.png">แบบ ปย.1</a>
+        <a href="#"><img src="image/doc.png">แบบ ปย.2</a>
+        <a href="#"><img src="image/doc.png">แบบติดตาม ปย.2</a>
+        <a href="#"><img src="image/doc.png">แบบ ปอ.3</a>
+        <a href="#"><img src="image/doc.png">แบบติดตาม ปอ.3</a>
+        <a href="#"><img src="image/doc.png">แบบ ปค.4</a>
+        <a href="#"><img src="image/doc.png">แบบ ปค.5</a>
+        <a href="#"><img src="image/doc.png">แบบติดตาม ปค.5</a>
+        <a href="#"><img src="image/doc.png">หลักเกณฑ์กระทรวงการคลังว่าด้วยการควบคุมภายใน พ.ศ.2561</a>
+      </div>
+
+    </div>
+
+    <!-- ส่วนของ footer -->
+    <div class="footer-content">
+        <p>Copyright 2023, Power of friendship.</p>
+        <ul type="none">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="../image/footer/facebook-app-symbol.png" alt="facebook-img"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="../image/footer/instagram.png" alt="instagram-img"></a></li>
+            <li><a href="https://www.google.map.com" target="_blank"><img src="../image/footer/pin.png" alt="map-img"></a></li>
+        </u>
+    </div> 
+</body>
+</html>

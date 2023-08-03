@@ -1,0 +1,218 @@
+body{
+    margin: 0;
+    background-color: #ffff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    font-size: 0.8vw;
+    background-color: white;
+}
+
+.statusbar{
+    height: 52px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.statusbar p {
+    display: flex;
+    justify-content: right;
+    margin-top: 12px;
+    margin-right: 9.5vw;
+    color: #143c6d;
+}
+
+
+/* ส่วนของ navbar */
+
+.navbar{
+    position: fixed;
+    top: 52px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+}
+
+#psu-icon{
+    cursor: pointer;
+    width: 6vw;
+    padding-left: 2.930vw;
+}
+
+.nav-link{
+    list-style: none;
+    padding-right: 6.593vw;
+}
+
+.nav-link li{
+    display: inline-block;
+    padding: 0 2.930vw;
+}
+
+.nav-link li a{
+    transition: all 0.3s ease 0s;
+    color: #143c6d;
+    font-size: 0.8vw    ;
+    text-decoration: none;
+}
+
+.nav-link li a :hover{
+    color: aqua;
+}
+
+/* Style for the dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #edf4ff; /* Set your preferred background color */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Set your preferred border style */
+}
+
+.dropdown a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #edf4ff;
+    color: #333;
+    margin: 5%;
+}
+
+.dropdown a:hover {
+    background-color: #dae1eb;
+}
+
+.tqa-dropdown{
+    width: 100px;
+}
+
+.risk-dropdown{
+    width: 200px;
+}
+
+/* ส่วนนำทาง */
+.location {
+    margin-top: 113px;
+    height: 40px;
+    background-color: #143c6d;
+    
+}
+
+.location-content{
+    background-color: #143c6d;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 115px;
+}
+
+.location a{
+    background-color: #143c6d;
+    color: white;
+    text-decoration: none;
+    margin-top: 6px;
+    margin-left: 6vw;
+    margin-right: 8px;
+    font-size: 0.8vw
+}
+
+.location span{
+    background-color: #143c6d;
+    color: white;
+    margin-top: 6px;
+    font-size: 0.8vw;
+}
+
+/* ส่วนเนื้อหา */
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.person-content h1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 100px;
+    color: #143c6d;
+}
+
+.person-content div h2{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #143c6d;
+}
+
+.ta1 , .ta3{
+    text-align: right;
+}
+
+.ta2 , .ta4{
+    text-align: left;
+}
+
+.contact{
+    display: flex;
+    justify-content: right;
+    width: 600px;
+    height: 300px;
+}
+
+.contact p{
+    width: 70%;
+    height: 50%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 40px 20px 0 20px;
+}
+
+.ta2 .contact , .ta4 .contact{
+    justify-content: left;
+} 
+
+
+
+
+/* ส่วนของ footer */
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    justify-content: space-between;
+    border-top: 1px solid #999999;
+}
+
+.footer-content p {
+    width: 50%;
+    margin-top: 40px;
+    padding-left: 10%;
+}
+
+.footer-content ul li{
+    position: relative;
+    display: inline;
+    left: 60%;
+    top: 30px;
+    padding-left: 5%;
+}
+
+.footer-content img{
+    width: 2%;
+}

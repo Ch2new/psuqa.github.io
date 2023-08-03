@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประกันคุณภาพ มอ.วิทยาเขตสุราษฎ์ธานี</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.2/chart.min.js" integrity="sha512-csUso5vWY3PpIJkxLWFbPI7KkjXFhKXpUaAUp1ZLyNhxVWdQacEPH9e7Iw6Rco4es1uQNnlxdCCFkSnJ/f1ZzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- ส่วนของ statusbar -->
+    <div class="statusbar">
+        <p>งานประกันคุณภาพการศึกษา มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎ์ธานี</p>
+    </div>
+    
+    <!-- ส่วนของ navigatebar -->
+    <div class="navbar">
+      <img src="../image/nav-img/psu-icon.png" id="psu-icon" alt="psu-img">
+      <ul class="nav-link">
+          <li><a href="main.html" id="home">หน้าแรก</a></li>
+          <li>
+            <a href="#" class="about-menu">เกี่ยวกับ <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown about-dropdown">
+              <a href="นโยบายประกันคุณภาพ/policy.html">นโยบายประกันคุณภาพ</a>
+              <a href="บุลคลากร/person.html">บุคลากร</a>
+              <a href="ประกาศ/announce.html">ประกาศ/ข้อบังคับ/ระเบียบ</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="tqa-menu">งานประกันคุณภาพ <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown tqa-dropdown">
+              <a href="TQA/tqa.html">TQA</a>
+              <a href="SAR/sar.html">SAR</a>
+              <a href="EDPEX/edpex.html">EdPEX</a>
+              <a href="AUNQA/aunqa.html">AUN QA</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="risk-menu">บริหารความเสี่ยงและควบคุมภายใน <img src="../image/nav-img/down-arrow.png" width="10px"></a>
+            <div class="dropdown risk-dropdown">
+              <a href="การบริหารความเสี่ยง/risk.html">การบริหารความเสี่ยง<br>และการควบคุมภายใน</a>
+              <a href="คู่มือและแบบฟอร์ม/manual.html">คู่มือและแบบฟอร์ม</a>
+            </div>
+          </li>
+          <li><a href="ประกาศ/announce.html">ประชุม/โครงการ/สัมมนา</a></li>
+          <li><a href="Contact/contact.html">ติดต่อเรา</a></li>
+      </ul>
+  </div>
+
+    <img src="image/main-img.png" alt="main-img" id="main-img">
+    
+    <!-- หัวข้อข้อมูลสถิติ -->
+    <div class="satistic">
+        <div class="left-element"></div>
+        <div class="satistic-head">
+            <img src="image/pie-chart.png" alt="pieChart-img" id="chart-img">
+            <h1> ข้อมูลและสถิติ</h1>
+        </div>
+        <div class="right-element"></div>
+    </div>
+    
+    <!-- เนื้อหา -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="content">
+        <div class="head-content">
+            <img src="image/student.png" alt="student-img">
+            <h1>ข้อมูลของนักศึกษา</h1>
+        </div>
+        <div class="chart-content">
+            <div>
+                <h2>คณะของนักศึกษา</h2>
+                <div class="chart-wrapper">
+                    <canvas id="std-fac"></canvas>
+                    <script>
+                        const fac = document.getElementById('std-fac').getContext('2d');
+                const chart1 = new Chart(fac, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['คณะวิทยาศาสตร์', 'คณะศิลปศาสตร์', 'คณะนวัตกรรมการเกษตรและประมง','วิทยาลัยนานาชาติ'],
+                    datasets: [{
+                      label: 'จำนวนนักศึกษา',
+                      data: [3,2,3,1],
+                      backgroundColor: [                
+                    '#1b59f8',
+                    '#4f7ef9',
+                    '#b6cafd',
+                    '#e5e5e5'
+                  ]
+                    }],
+                  },
+                  options: {
+                    responsive: true
+                  }
+                });
+                    </script>
+                </div>
+            </div>
+            <div>
+                <h2>ร้อยละบัณฑิตปริญญาตรีปี 65 ที่มีงานทำภายใน 1 ปี</h2>
+                <div class="chart-wrapper">
+                    <canvas id="std-sex"></canvas>
+                </div>
+                <script>
+                    const sex = document.getElementById('std-sex').getContext('2d');
+            const chart2 = new Chart(sex, {
+              type: 'doughnut',
+              data: {
+                labels: ['มีงานประจำ', 'ประกอบอาชีพอิสระ', 'ว่างงาน'],
+                datasets: [{
+                  label: 'ร้อยละนักศึกษา',
+                  data: [55,40,45],
+                  backgroundColor: [
+                    '#1b59f8',
+                    '#4f7ef9',
+                    '#e5e5e5'
+                  ]
+                }],
+              },
+              options: {
+                scale: {
+                    y: {
+                        max :100,
+                        stepSize :10
+                    }
+                },
+                responsive: true
+              }
+            });
+                </script>
+            </div>
+            <div>
+                <h2>สถานะของนักศึกษา</h2>
+                <div class="chart-wrapper">
+                    <canvas id="std-status"></canvas>
+                    <script>
+                        const status = document.getElementById('std-status').getContext('2d');
+                const chart3 = new Chart(status, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['นักศึกษาปริญาตรี', 'นักศึกษาปริญาโท', 'นักศึกษาปริญาเอก'],
+                    datasets: [{
+                      label: 'จำนวนนักศึกษา',
+                      data: [7,2,1],
+                      backgroundColor: [
+                    '#1b59f8',
+                    '#4f7ef9',
+                    '#e5e5e5'
+                  ]
+                    }],
+                  },
+                  options: {
+                    responsive: true
+                  }
+                });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="head-content">
+            <img src="image/teacher.png" alt="teacher-img">
+            <h1>ข้อมูลของบุคลากร</h1>
+        </div>
+        <div class="chart-content">
+            <div>
+                <h2>คณะของอาจารย์</h2>
+                <div class="chart-wrapper">
+                    <canvas id="ta-fac"> </canvas>
+                    <script>
+                        const taFac = document.getElementById('ta-fac').getContext('2d');
+                const chart4 = new Chart(taFac, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['คณะวิทยาศาสตร์', 'คณะศิลปศาสตร์', 'คณะนวัตกรรมการเกษตรและประมง','วิทยาลัยนานาชาติ'],
+                    datasets: [{
+                      label: 'จำนวนนักศึกษา',
+                      data: [7,5,5,4],
+                      backgroundColor: [                
+                    '#1b59f8',
+                    '#4f7ef9',
+                    '#b6cafd',
+                    '#e5e5e5'
+                    ]
+                    }],
+                  },
+                  options: {
+                    responsive: true
+                  }
+                });
+                </script>
+                </div>
+                
+            </div>
+            <div>
+                <h2>ตำแหน่งทางวิชาการ</h2>
+                <div class="chart-wrapper">
+                    <canvas id="ta-sex"></canvas>
+                    <script>
+                        const taSex = document.getElementById('ta-sex').getContext('2d');
+                const chart5 = new Chart(taSex, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['ศาสตราจารย์', 'รองศาสตราจารย์', 'ผู้ช่วยศาสตราจารย์'],
+                    datasets: [{
+                      label: 'จำนวนนักศึกษา',
+                      data: [5,2,5],
+                      backgroundColor: [                
+                    '#1b59f8',
+                    '#b6cafd',
+                    '#e5e5e5'
+                    ]
+                    }],
+                  },
+                  options: {
+                    responsive: true
+                  }
+                });
+                </script>
+                </div>
+                
+            </div>
+            <div>
+                <h2>ระดับการศึกษา</h2>
+                <div class="chart-wrapper">
+                    <canvas id="ta-status"></canvas>
+                    <script>
+                        const taStatus = document.getElementById('ta-status').getContext('2d');
+                const chart6 = new Chart(taStatus, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['ปริญาเอก', 'ปริญาโท', 'ปริญาตรี'],
+                    datasets: [{
+                      label: 'จำนวนนักศึกษา',
+                      data: [7,5,1],
+                      backgroundColor: [                
+                    '#1b59f8',
+                    '#b6cafd',
+                    '#e5e5e5'
+                    ]
+                    }],
+                  },
+                  options: {
+                    responsive: true
+                  }
+                });
+                </script>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- ส่วนของ footer -->
+    <div class="footer-content">
+        <p>Copyright 2023, Power of friendship.</p>
+        <ul type="none">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="image/footer/facebook-app-symbol.png" alt="facebook-img"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="image/footer/instagram.png" alt="instagram-img"></a></li>
+            <li><a href="https://www.google.map.com" target="_blank"><img src="image/footer/pin.png" alt="map-img"></a></li>
+        </u>
+    </div>  
+</body>
+</html>
